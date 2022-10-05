@@ -1,0 +1,12 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+---
+
+<MainLayout title="Institut 4000">
+  <Navbar client:idle />
+  <Hero />
+  <About />
+</MainLayout>

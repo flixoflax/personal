@@ -1,0 +1,40 @@
+---
+import SectionContainer from "../layout/SectionContainer.astro";
+---
+
+<SectionContainer
+  className={"bg-black py-36 sm:py-56 relative overflow-hidden"}
+>
+  <div
+    class="flex flex-col items-start md:items-center justify-center space-y-10 z-30"
+  >
+    <h1 class="font-display text-5xl md:text-6xl text-white md:text-center">
+      I love to create digital experiences.
+    </h1>
+    <button
+      type="button"
+      class="py-3 px-6 bg-pink-400 hover:bg-pink-300 transition-all ease-out rounded-md text-lg"
+      >Me too, let's create one.</button
+    >
+  </div>
+  <img
+    src="/img/tutti-yellow-smiley.png"
+    class="absolute top-0 right-0 w-36 md:w-40 -mt-4 -mr-10 select-none"
+    alt="yellow smiley sticker"
+  />
+  <img
+    src="/img/tutti-light-bulb.png"
+    class="absolute -left-10 md:left-0 -bottom-10 md:-bottom-20 rotate-45 w-24 md:w-56 select-none"
+    alt="light bulb sticker"
+  />
+  <img
+    src="/img/tutti-blue-multi-pointed-star.png"
+    class="absolute rotate-90 left-12 md:left-28 -bottom-10 md:-bottom-36 select-none w-24 md:w-72"
+    alt="blue multi-pointed star sticker"
+  />
+  <img
+    src="/img/tutti-purple-browser-window.png"
+    class="absolute -right-5 -bottom-7 -rotate-12 select-none w-36 md:w-64"
+    alt="purple browser sticker"
+  />
+</SectionContainer>

@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-Type" content="text/html; utf-8" />
+    <meta http-equiv="Pragma" content="cache" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta http-equiv="content-Language" content="en" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Niels Clormann" />
+    <meta name="publisher" content="Institut 4000" />
+    <meta name="copyright" content="Niels Clormann © 2022" />
+    <meta name="audience" content="all" />
+    <meta name="page-type" content="private homepage" />
+    <meta name="page-topic" content="service" />
+    <meta http-equiv="Reply-to" content="flixoflax@gmx.de" />
+    <meta name="expires" content="" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700&f[]=general-sans@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
