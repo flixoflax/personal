@@ -7,14 +7,15 @@ const Navbar = () => {
     <>
       <nav
         className={`bg-neutral-900 ${
-          open && "h-screen"
-        } sm:h-16 absolute w-full z-50`}
+          open ? "h-screen fixed" : "absolute"
+        } sm:h-16 w-full z-50`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="sm:hidden flex-1">
               <button
                 type="button"
+                aria-label="Toggle main menu"
                 className="text-white h-7 w-7 flex items-center justify-center"
                 onClick={() => setOpen(!open)}
               >
@@ -57,25 +58,25 @@ const Navbar = () => {
             </h1>
             <div className="text-gray-200 space-x-2 hidden sm:flex flex-1 justify-center">
               <a
-                href="#"
+                href="#about"
                 className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
               >
                 About
               </a>
               <a
-                href="#"
+                href="#services"
                 className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#projects"
                 className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
               >
                 Projects
               </a>
               <a
-                href="#"
+                href="#faq"
                 className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
               >
                 FAQ
@@ -123,10 +124,10 @@ const Navbar = () => {
           id="mobile-menu"
         >
           <div className="flex flex-col space-y-8 p-4 text-4xl pt-10">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">FAQ</a>
+            <a href="#about" onClick={() => setOpen(!open)}>About</a>
+            <a href="#services" onClick={() => setOpen(!open)}>Services</a>
+            <a href="#projects" onClick={() => setOpen(!open)}>Projects</a>
+            <a href="#faq" onClick={() => setOpen(!open)}>FAQ</a>
           </div>
         </div>
       </nav>
