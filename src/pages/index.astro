@@ -1,18 +1,16 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/nav/Navbar";
 import Hero from "../sections/Hero.astro";
-import About from "../sections/About.astro";
 import Services from "../sections/Services.astro";
-import Footer from "../sections/Footer.astro";
-import Projects from "../sections/Projects.astro";
+import CaseStudies from "../sections/CaseStudies.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout title="Institut 4000">
   <Navbar client:idle />
   <Hero />
-  <About />
   <Services />
-  <Projects />
+  <CaseStudies />
+  <Footer></Footer>
 </MainLayout>
-<Footer />

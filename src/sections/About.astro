@@ -1,29 +1,34 @@
 ---
 import SectionContainer from "../layout/SectionContainer.astro";
+import Link from "../components/Link.astro";
 ---
 
-<SectionContainer className={"py-20 relative"} id="about">
-  <img
-    src="/img/tutti-blue-rocket.png"
-    class="absolute right-20 md:right-36 w-20 md:w-36 -top-20 md:-top-40 -rotate-45 select-none"
-    alt="blue rocket sticker"
-  />
-  <img
-    src="/img/tutti-search-string.png"
-    class="absolute -rotate-12 -left-10 md:-left-5 w-36 md:w-64 -top-5 md:-top-10 select-none"
-    alt="search string sticker"
-  />
+<SectionContainer className={"py-56 relative"} id="about">
+  <div class="space-y-3">
+    <h1 class="font-display text-4xl md:text-5xl mb-10">About</h1>
+  </div>
+
   <p class="text-xl md:w-2/3">
     Dear small business owners, creators, creatives and people who love to bring
     ideas to life: your wishes have been granted. I'm Niels, a development
     enthusiast with a passion for design, exploring new entrepreneurial
     opportunities in technology.
 
-    <br />
-    <br />
+    <br /><br />
+
+    Whether you want to validate your awesome idea with a fully managed MVP or
+    need me as your new CTO: I'm here to help.
+
+    <br /><br />
 
     Institut 4000 serves as an overarching brand for many of my projects, which
     can range from one to an infinite number of participants. tl;dr it's my
     personal brand.
+
+    <br /><br />
+
+    <Link href="https://linkedin.com/in/niels-legolas-clormann"
+      >Check out my CV</Link
+    >
   </p>
 </SectionContainer>

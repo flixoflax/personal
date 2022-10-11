@@ -1,0 +1,39 @@
+---
+interface Props {
+  client: string;
+  imgUrl: string;
+  href?: string;
+  incompleteText?: string;
+}
+
+const { client, imgUrl, href, incompleteText = "Coming Soon" } = Astro.props;
+const isComplete = href ? true : false;
+---
+
+<div class="group space-y-10">
+  <img src={imgUrl} alt={`${client} case study`} class="select-none" />
+  <div class="space-y-5">
+    <h1 class="font-display text-3xl md:text-4xl">{client} —</h1>
+    <div class="text-black/70 pb-5">
+      <slot />
+    </div>
+
+    {
+      isComplete ? (
+        <a
+          href={href}
+          class="inline-block rounded-md text-center transition bg-black text-white hover:bg-opacity-90 py-2.5 px-6"
+        >
+          Read Case Study
+        </a>
+      ) : (
+        <button
+          disabled
+          class="cursor-not-allowed inline-block rounded-md text-center transition bg-gray-200 text-black hover:bg-opacity-90 py-2.5 px-6"
+        >
+          {incompleteText}
+        </button>
+      )
+    }
+  </div>
+</div>

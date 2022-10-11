@@ -1,17 +1,24 @@
 import { useState } from "react";
+import Navlink from "./Navlink";
 
-const Navbar = () => {
+interface Props {
+  className?: string
+}
+
+const Navbar = (props: Props) => {
   const [open, setOpen] = useState<boolean>(false);
+  const {className} = props
+
 
   return (
     <>
       <nav
-        className={`bg-neutral-900 ${
+        className={`${className} bg-black ${
           open ? "h-screen fixed" : "absolute"
-        } sm:h-16 w-full z-50`}
+        } sm:h-20 w-full z-50`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
+          <div className="relative flex h-20 items-center justify-between">
             <div className="sm:hidden flex-1">
               <button
                 type="button"
@@ -53,34 +60,14 @@ const Navbar = () => {
                 )}
               </button>
             </div>
-            <h1 className="text-gray-100 font-display text-4xl flex-1 text-center sm:text-left select-none">
-              <a href="/">4000</a>
+            <h1 className="text-white font-display text-lg md:text-2xl flex-1 text-center sm:text-left select-none">
+              <a href="/">Institut 4000</a>
             </h1>
-            <div className="text-gray-200 space-x-2 hidden sm:flex flex-1 justify-center">
-              <a
-                href="#about"
-                className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
-              >
-                About
-              </a>
-              <a
-                href="#services"
-                className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
-              >
-                Services
-              </a>
-              <a
-                href="#projects"
-                className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
-              >
-                Projects
-              </a>
-              <a
-                href="#faq"
-                className="hover:text-white px-4 py-1 rounded-md hover:bg-neutral-800"
-              >
-                FAQ
-              </a>
+            <div className="space-x-10 hidden sm:flex flex-1 justify-center">
+              <Navlink href="#about">About</Navlink>
+              <Navlink href="#services">Services</Navlink>
+              <Navlink href="#case-studies">Case Studies</Navlink>
+              <Navlink href="#contact">Contact</Navlink>
             </div>
             <div className="flex text-gray-200 space-x-5 flex-1 justify-end">
               <a
@@ -124,10 +111,18 @@ const Navbar = () => {
           id="mobile-menu"
         >
           <div className="flex flex-col space-y-8 p-4 text-4xl pt-10">
-            <a href="#about" onClick={() => setOpen(!open)}>About</a>
-            <a href="#services" onClick={() => setOpen(!open)}>Services</a>
-            <a href="#projects" onClick={() => setOpen(!open)}>Projects</a>
-            <a href="#faq" onClick={() => setOpen(!open)}>FAQ</a>
+            <a href="#about" onClick={() => setOpen(!open)}>
+              About
+            </a>
+            <a href="#services" onClick={() => setOpen(!open)}>
+              Services
+            </a>
+            <a href="#projects" onClick={() => setOpen(!open)}>
+              Projects
+            </a>
+            <a href="#faq" onClick={() => setOpen(!open)}>
+              FAQ
+            </a>
           </div>
         </div>
       </nav>

@@ -3,48 +3,42 @@ import Service from "../components/Service.astro";
 import SectionContainer from "../layout/SectionContainer.astro";
 ---
 
-<SectionContainer className={"py-20"} id={"services"}>
-  <div class="space-y-3">
-    <h1 class="font-display text-4xl md:text-5xl">Services</h1>
-    <p class="text-gray-600">
+<SectionContainer className={"py-36 bg-black"} id={"services"}>
+  <div class="space-y-3 flex flex-col items-center">
+    <h1 class="font-display text-4xl md:text-5xl text-white">Services</h1>
+    <p class="text-center text-white/70">
       You may ask yourself "why you?". Here are a few services I can bring to
       the table:
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-    <Service
-      imgUrl="/img/tutti-laptop-with-code-programming-screen-1.png"
-      name="Development"
-    >
-      Whether you need a fancy landing page for your product or a mobile app, I
-      can build it for you.
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mt-10">
+    <Service name="Development">
+      I bring products to life using latest technologies while focusing on a
+      perfect visual output through clean and maintainable code.
     </Service>
 
-    <Service
-      imgUrl="/img/tutti-computer-with-graphic-design-elements-1.png"
-      name="Design"
-    >
-      If you like this page you will probably want to take a look at my design
-      skills.
+    <Service name="Design">
+      My design process is about making complex solutions, simple. I combine
+      thoughtful user experience with a clear visual identity.
     </Service>
 
-    <Service
-      imgUrl="/img/tutti-happy-and-sad-smileys-on-weighing-scale.png"
-      name="Consulting"
-    >
-      Of course my expertise can also just be used for consulting purposes. Does
-      it make sense to use this technology? How would I scale my app? Name your
-      question and I am sure I have an answer.
+    <Service name="Consulting">
+      In our strategy process, we analyze customer needs, identify general
+      product problems and advise on important future decisions.
     </Service>
 
-    <Service
-      imgUrl="/img/tutti-notepad-and-pencil-for-ideas.png"
-      name="Product Management"
-    >
-      Managing a team of engineers can be hard, especially if you are not using
-      the same lingo. Through my background in technology I know how to talk
-      with devs.
+    <Service name="Product Management">
+      In our strategy process, we analyze customer needs, identify general
+      product problems and advise on important future decisions.
     </Service>
+  </div>
+
+  <div class="mt-12 md:mt-16 flex flex-col sm:items-center">
+    <button
+      type="button"
+      class="rounded-md text-center transition bg-white text-black hover:bg-opacity-90 py-2.5 px-6"
+      >Explore Services</button
+    >
   </div>
 </SectionContainer>
