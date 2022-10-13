@@ -103,7 +103,7 @@ const { color = "bg-black", items } = Astro.props;
     <div class="flex flex-col space-y-8 p-4 text-4xl pt-10">
       {
         items.map((item) => (
-          <a href={item.href} onclick="toggleMenu()">
+          <a href={item.href} onclick="toggleMenu()" class="select-none">
             {item.title}
           </a>
         ))
