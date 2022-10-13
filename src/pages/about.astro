@@ -1,0 +1,28 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import CTA from "../sections/CTA.astro";
+
+const nav = [
+  {
+    title: "About",
+    href: "/about",
+    isActive: true,
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Case Studies",
+    href: "/case-studies",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
+---
+
+<MainLayout title="About | Institut 4000" navigation={nav}>
+  <CTA />
+</MainLayout>

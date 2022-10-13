@@ -2,11 +2,11 @@
 import SectionContainer from "../layout/SectionContainer.astro";
 
 interface Props {
-  title: string;
-  href: string;
+  title?: string;
+  href?: string;
 }
 
-const { title, href } = Astro.props;
+const { title = "Get in touch", href = "#" } = Astro.props;
 ---
 
 <SectionContainer

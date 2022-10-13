@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import CTA from "../sections/CTA.astro";
+
+const nav = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Case Studies",
+    href: "/case-studies",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    isActive: true,
+  },
+];
+---
+
+<MainLayout title="Contact | Institut 4000" navigation={nav}>
+  <CTA title={"Explore some Case Studies"} href={"/case-studies"}
+    >Keep an eye on your inbox. We'll be in touch soon.</CTA
+  >
+</MainLayout>
