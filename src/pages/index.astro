@@ -1,16 +1,34 @@
 ---
-import MainLayout from "../layout/MainLayout.astro";
-import Navbar from "../components/nav/Navbar";
+import Footer from "../components/Footer.astro";
+import CaseStudies from "../sections/CaseStudies.astro";
+import CTA from "../sections/CTA.astro";
 import Hero from "../sections/Hero.astro";
 import Services from "../sections/Services.astro";
-import CaseStudies from "../sections/CaseStudies.astro";
-import Footer from "../components/Footer.astro";
+import MainLayout from "../layout/MainLayout.astro";
+
+const nav = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Case Studies",
+    href: "/case-studies",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
 ---
 
-<MainLayout title="Institut 4000">
-  <Navbar client:idle />
+<MainLayout title="Institut 4000" navigation={nav}>
   <Hero />
   <Services />
   <CaseStudies />
-  <Footer></Footer>
+  <CTA href="#contact" title="Get in touch" />
 </MainLayout>

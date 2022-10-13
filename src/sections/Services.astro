@@ -3,7 +3,7 @@ import Service from "../components/Service.astro";
 import SectionContainer from "../layout/SectionContainer.astro";
 ---
 
-<SectionContainer className={"py-36 bg-black"} id={"services"}>
+<SectionContainer className={"py-20 md:py-36 bg-black"} id={"services"}>
   <div class="space-y-3 flex flex-col items-center">
     <h1 class="font-display text-4xl md:text-5xl text-white">Services</h1>
     <p class="text-center text-white/70">
@@ -12,7 +12,7 @@ import SectionContainer from "../layout/SectionContainer.astro";
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
     <Service name="Development">
       I bring products to life using latest technologies while focusing on a
       perfect visual output through clean and maintainable code.
@@ -37,7 +37,7 @@ import SectionContainer from "../layout/SectionContainer.astro";
   <div class="mt-12 md:mt-16 flex flex-col sm:items-center">
     <button
       type="button"
-      class="rounded-md text-center transition bg-white text-black hover:bg-opacity-90 py-2.5 px-6"
+      class="rounded-md text-center transition bg-white text-black hover:bg-opacity-90 py-2.5 px-6 select-none"
       >Explore Services</button
     >
   </div>

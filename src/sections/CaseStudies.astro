@@ -3,28 +3,30 @@ import CaseStudy from "../components/CaseStudy.astro";
 import SectionContainer from "../layout/SectionContainer.astro";
 ---
 
-<SectionContainer className={"bg-white py-56"} id="case-studies">
+<SectionContainer className={"bg-white py-20 md:py-56"} id="case-studies">
   <div class="space-y-3">
     <h1 class="font-display text-4xl md:text-5xl">Case Studies</h1>
     <p class="text-black/70">
       Here are a few of the projects I've been working on
     </p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 mt-20 gap-x-16 gap-y-10">
-    <div class="grid grid-cols-1 gap-y-10 md:gap-y-20">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 mt-20 gap-x-16 gap-y-20 md:gap-y-10"
+  >
+    <div class="grid grid-cols-1 gap-y-20">
       <CaseStudy
         client="cyberflex"
         imgUrl="/img/studies/cyberflex/cover.png"
         href={"/study/cyberflex"}
       >
-        The Berlin based producing team Cyberflex is consisting of audio and
-        visual artists. While focusing on styles that are yet to come they are
-        aiming to embrace the cultural adaptions of old school originators into
-        current lifestyles.
+        The Berlin based collective Cyberflex is consisting of audio and visual
+        artists. While focusing on styles that are yet to come they are aiming
+        to embrace the cultural adaptions of old school originators into current
+        lifestyles.
       </CaseStudy>
 
       <CaseStudy
-        client="@flixoflax/jym"
+        client="jym"
         imgUrl="/img/studies/jym/carbon.png"
         incompleteText={"Work in Progress"}
       >
@@ -35,15 +37,14 @@ import SectionContainer from "../layout/SectionContainer.astro";
         license.
       </CaseStudy>
     </div>
-    <div class="grid grid-cols-1 gap-y-10 md:gap-y-20">
+    <div class="grid grid-cols-1 gap-y-20">
       <CaseStudy
         client="FIYA"
         imgUrl="/img/studies/fiya/cover.png"
         incompleteText={"Non-disclosure agreement"}
       >
-        FIYA is an NDA client looking to launch the next big thing in fashion
-        e-commerce. I advised on creating the MVP and scaling it to an
-        enterprise app.
+        FIYA is looking to launch the next big thing in fashion e-commerce. I
+        advised on creating the MVP and scaling it to an enterprise app.
       </CaseStudy>
     </div>
   </div>
