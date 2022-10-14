@@ -1,0 +1,13 @@
+---
+interface Props {
+  href: string;
+  isActive?: boolean;
+}
+
+const { href, isActive } = Astro.props;
+const className = isActive
+  ? "text-4xl select-none after:transition-all text-white relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:bg-white"
+  : "text-4xl select-none after:transition-all text-white relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:w-0 after:bg-white/70";
+---
+
+<a class={className} href={href} onclick="toggleMenu()"><slot /></a>
