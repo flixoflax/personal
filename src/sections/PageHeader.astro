@@ -1,0 +1,27 @@
+---
+import SectionContainer from "../layout/SectionContainer.astro";
+
+interface Props {
+  headline: string;
+}
+
+const { headline } = Astro.props;
+---
+
+<SectionContainer className={"bg-black py-16 md:py-20 lg:py-28"}>
+  <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10">
+    <div class="lg:col-span-10">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white">
+        {headline}
+      </h1>
+    </div>
+    <div class="text-white/70 md:text-lg lg:row-start-2 lg:col-span-8">
+      <slot
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolore
+        numquam culpa labore magni, deserunt blanditiis quidem dolorem eum
+        maiores, temporibus at aliquid saepe, pariatur tenetur harum quas
+        repudiandae inventore.</slot
+      >
+    </div>
+  </div>
+</SectionContainer>

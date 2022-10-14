@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import CTA from "../sections/CTA.astro";
+import PageHeader from "../sections/PageHeader.astro";
 
 const nav = [
   {
@@ -24,6 +25,9 @@ const nav = [
 ---
 
 <MainLayout title="Contact | Institut 4000" navigation={nav}>
+  <PageHeader
+    headline="Sit back and relax, your journey with Institut 4000 has just begun."
+  />
   <CTA title={"Explore some Case Studies"} href={"/case-studies"}
     >Keep an eye on your inbox. We'll be in touch soon.</CTA
   >

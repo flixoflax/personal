@@ -2,6 +2,7 @@
 import MainLayout from "../../layout/MainLayout.astro";
 import CaseStudies from "../../sections/CaseStudies.astro";
 import CTA from "../../sections/CTA.astro";
+import PageHeader from "../../sections/PageHeader.astro";
 
 const nav = [
   {
@@ -25,6 +26,7 @@ const nav = [
 ---
 
 <MainLayout title="Case Studies | Institut 4000" navigation={nav}>
+  <PageHeader headline="Solutions we crafted to make human lives easier." />
   <CaseStudies />
   <CTA />
 </MainLayout>
