@@ -1,6 +1,16 @@
 ---
 import CaseStudy from "../components/CaseStudy.astro";
 import SectionContainer from "../layout/SectionContainer.astro";
+import type { CaseStudy as CaseStudyType } from "../types";
+
+const studies = await Astro.glob<CaseStudyType>("../pages/case-studies/*.md")
+  const sortedStudies = studies.sort((a, b) => {
+  if (a.frontmatter.position < b.frontmatter.position) return -1; 
+  else return 1;
+  
+  })
+const even = sortedStudies.filter((_, index) => index % 2 === 1)
+const odd = sortedStudies.filter((_, index) => index % 2 === 0)
 ---
 
 <SectionContainer
@@ -17,38 +27,28 @@ import SectionContainer from "../layout/SectionContainer.astro";
     class="grid grid-cols-1 md:grid-cols-2 mt-20 gap-x-16 gap-y-20 md:gap-y-10"
   >
     <div class="grid grid-cols-1 gap-y-20">
-      <CaseStudy
-        client="cyberflex"
-        imgUrl="/img/studies/cyberflex/cover.png"
-        href={"/case-studies/cyberflex"}
-      >
-        The Berlin based collective Cyberflex is consisting of audio and visual
-        artists. While focusing on styles that are yet to come they are aiming
-        to embrace the cultural adaptions of old school originators into current
-        lifestyles.
-      </CaseStudy>
-
-      <CaseStudy
-        client="jym"
-        imgUrl="/img/studies/jym/carbon.png"
-        incompleteText={"Work in Progress"}
-      >
-        Jym is a CLI tool for rapid creation of SaaS MVPs. It handles monorepo
-        creation including boilerplate code for a landing page, documentation
-        site and app with authentication and subscription payments with Stripe,
-        and BaaS infrastructure setup (Supabase). It is licensed under the BSD 3
-        license.
-      </CaseStudy>
+      {odd.map((study) => (
+        <CaseStudy
+          client={study.frontmatter.client}
+          imgUrl={study.frontmatter.thumbnailUrl}
+          href={study.frontmatter.draft ? undefined : study.url}
+          incompleteText={study.frontmatter.draftText}
+        >
+            {study.frontmatter.description.long}
+          </CaseStudy>
+      ))}
     </div>
     <div class="grid grid-cols-1 gap-y-20">
-      <CaseStudy
-        client="FIYA"
-        imgUrl="/img/studies/fiya/cover.png"
-        incompleteText={"Non-disclosure agreement"}
-      >
-        FIYA is looking to launch the next big thing in fashion e-commerce. I
-        advised on creating the MVP and scaling it to an enterprise app.
-      </CaseStudy>
+      {even.map((study) => (
+        <CaseStudy
+          client={study.frontmatter.client}
+          imgUrl={study.frontmatter.thumbnailUrl}
+          href={study.frontmatter.draft ? undefined : study.url}
+          incompleteText={study.frontmatter.draftText}
+        >
+            {study.frontmatter.description.long}
+          </CaseStudy>
+      ))}
     </div>
   </div>
 </SectionContainer>
