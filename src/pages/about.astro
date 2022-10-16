@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import CTA from "../sections/CTA.astro";
+import About from "../sections/About.astro";
+import PageHeader from "../sections/PageHeader.astro";
 
 const nav = [
   {
@@ -24,5 +26,14 @@ const nav = [
 ---
 
 <MainLayout title="About | Institut 4000" navigation={nav}>
-  <CTA />
+  <PageHeader headline="About">
+    Dear small business owners, creators, creatives and people who love to bring
+    ideas to life: your wishes have been granted. I'm <span class="text-white"
+      >Niels</span
+    >, a development enthusiast with a passion for design, exploring new
+    entrepreneurial opportunities in technology.
+  </PageHeader>
+  <CTA title={"Explore Services"} href={"/services"}
+    >Wondering what I can bring to the table?</CTA
+  >
 </MainLayout>
