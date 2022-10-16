@@ -1,5 +1,7 @@
 ---
+import Feature from "../components/Feature.astro";
 import MainLayout from "../layout/MainLayout.astro";
+import SectionContainer from "../layout/SectionContainer.astro";
 import CTA from "../sections/CTA.astro";
 import PageHeader from "../sections/PageHeader.astro";
 
@@ -25,6 +27,55 @@ const nav = [
 ---
 
 <MainLayout title="Services | Institut 4000" navigation={nav}>
-  <PageHeader headline="I can handle all the hassle."></PageHeader>
-  <CTA />
+  <PageHeader headline="I can handle all the hassle." />
+  <div class="py-20 md:py-32 lg:py-56 flex flex-col space-y-10">
+    <Feature
+      imgUrl="/img/development.png"
+      name="Development"
+      subServices={["q", "q"]}
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
+      veritatis fugiat obcaecati maxime explicabo adipisci quas consequatur
+      earum voluptatem esse nisi amet architecto alias blanditiis, perferendis
+      id, mollitia quae harum.
+    </Feature>
+
+    <Feature
+      imgUrl="/img/design.png"
+      name="Design"
+      subServices={["q", "q"]}
+      invert={true}
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
+      veritatis fugiat obcaecati maxime explicabo adipisci quas consequatur
+      earum voluptatem esse nisi amet architecto alias blanditiis, perferendis
+      id, mollitia quae harum.
+    </Feature>
+
+    <Feature
+      imgUrl="/img/consulting.png"
+      name="Consulting"
+      subServices={["q", "q"]}
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
+      veritatis fugiat obcaecati maxime explicabo adipisci quas consequatur
+      earum voluptatem esse nisi amet architecto alias blanditiis, perferendis
+      id, mollitia quae harum.
+    </Feature>
+
+    <Feature
+      imgUrl="/img/productmanagement.png"
+      name="Product Management"
+      subServices={["q", "q"]}
+      invert={true}
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
+      veritatis fugiat obcaecati maxime explicabo adipisci quas consequatur
+      earum voluptatem esse nisi amet architecto alias blanditiis, perferendis
+      id, mollitia quae harum.
+    </Feature>
+  </div>
+  <CTA title={"Explore Case Studies"} href={"/case-studies"}
+    >Wanna see it in Action?</CTA
+  >
 </MainLayout>
