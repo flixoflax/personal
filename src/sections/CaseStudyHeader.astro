@@ -1,0 +1,48 @@
+---
+import SectionContainer from "../layout/SectionContainer.astro";
+import type { CaseStudy } from "../types";
+
+type Props = CaseStudy;
+
+const { client, header, services, description } = Astro.props;
+---
+
+<SectionContainer className={"bg-black py-16 md:py-20 lg:py-28"}>
+  <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10">
+    <div class="lg:col-span-10 space-y-8">
+      <span
+        set:text={client}
+        class="font-display text-white text-xl md:text-2xl lg:text-3xl"></span>
+      <h1
+        class="font-display text-4xl md:text-5xl lg:text-6xl text-white"
+        set:html={header.headline}
+      >
+      </h1>
+    </div>
+    <div
+      class="text-white/70 md:text-lg lg:row-start-2 lg:col-span-12"
+      set:html={header.content}
+    >
+    </div>
+  </div>
+</SectionContainer>
+
+<SectionContainer className={"pt-16 md:pt-20 lg:pt-28"}>
+  <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10 gap-x-20">
+    <div class="lg:col-span-8 space-y-8">
+      <h1
+        set:text={description.short}
+        class="font-display text-2xl md:text-3xl lg:text-4xl"
+      >
+      </h1>
+      <p class="font-sans lg:text-lg text-black/70" set:html={description.long}>
+      </p>
+    </div>
+    <div class="lg:text-lg lg:col-span-4">
+      <h1 class="font-display mb-2">Services I provided:</h1>
+      <div class="space-y-2 text-black/70">
+        {services.map((service) => <p class="">— {service}</p>)}
+      </div>
+    </div>
+  </div>
+</SectionContainer>

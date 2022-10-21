@@ -8,14 +8,10 @@ description:
     short: Awesome short description,
     long: The Berlin based collective Cyberflex is consisting of audio and visual artists. While focusing on styles that are yet to come they are aiming to embrace the cultural adaptions of old school originators into current lifestyles.,
   }
-services: []
+services:
+  ["Frontend Development", "CMS Integration", "Deployment", "Overall advisory"]
 
 position: 1
 ---
 
-# Hi there!
-
-This is your first markdown page. It probably isn't styled much, although
-Markdown does support **bold** and _italics._
-
-To learn more about adding a layout to your page, read the next section on **Markdown Layouts.**
+# Here goes the case study markdown.

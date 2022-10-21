@@ -2,10 +2,11 @@
 import type { MarkdownLayoutProps } from "astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/nav/Navbar.astro";
+import CaseStudyHeader from "../sections/CaseStudyHeader.astro";
 import type { CaseStudy } from "../types";
 import SectionContainer from "./SectionContainer.astro";
 
-type Props = MarkdownLayoutProps<CaseStudy>
+type Props = MarkdownLayoutProps<CaseStudy>;
 
 const nav = [
   {
@@ -64,6 +65,58 @@ const { frontmatter } = Astro.props;
     />
     <title>{frontmatter.client} | Institut 4000</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css"
+      integrity="sha512-zb2pp+R+czM7GAemdSUQt6jFmr3qCo6ikvBgVU6F5GvwEDR0C2sefFiPEJ9QUpmAKdD5EqDUdNRtbOYnbF/eyQ=="
+      crossorigin="anonymous"
+    />
+
+    <style is:global>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .markdown-body {
+        @apply font-sans text-black/70;
+      }
+
+      .markdown-body h1 {
+        @apply font-display block text-black text-3xl lg:text-5xl border-none;
+      }
+
+      .markdown-body h2 {
+        @apply font-display block text-black text-xl lg:text-2xl border-none;
+      }
+
+      .markdown-body h3 {
+        @apply font-display block text-black text-lg lg:text-xl border-none;
+      }
+
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .markdown-body strong {
+        @apply text-black font-display;
+      }
+
+      .markdown-body blockquote {
+        @apply border-l-4 border-l-gray-300 text-black/60;
+        padding: 0 1em;
+      }
+
+      .markdown-body blockquote strong {
+        @apply text-black/70;
+      }
+    </style>
+
     <script
       defer
       data-domain="institut4000.gmbh"
@@ -72,17 +125,16 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <Navbar items={nav} />
+    <CaseStudyHeader {...frontmatter} />
 
-    <SectionContainer className={"py-20 md:py-32 lg:py-56"}>  
-      <slot />
+    <SectionContainer
+      className={"py-20 md:py-32 lg:py-56 text-black/70 lg:text-lg"}
+    >
+      <div class="markdown-body">
+        <slot />
+      </div>
     </SectionContainer>
 
     <Footer />
-
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
   </body>
 </html>
