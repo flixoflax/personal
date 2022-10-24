@@ -17,6 +17,7 @@ description:
 services: ["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "Consetetur"]
 
 position: 3
+textColor: "#FFC83D"
 draft: true
 draftText: Work in Progress
 ---
