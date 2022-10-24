@@ -9,21 +9,27 @@ interface Item {
 }
 
 interface Props {
-  color?: string;
+  backgroundColor?: string;
+  textColor?: string;
   items: Item[];
 }
 
-const { color = "bg-black", items } = Astro.props;
+const { backgroundColor = "black", textColor = "white", items } = Astro.props;
 ---
 
-<nav id="desktop-menu" class={`${color} bg-black absolute lg:h-20 w-full z-50`}>
+<nav
+  id="desktop-menu"
+  class="absolute lg:h-20 w-full z-50"
+  style={`background-color: ${backgroundColor}`}
+>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="relative flex h-20 items-center justify-between">
       <div class="lg:hidden flex-1">
         <button
           type="button"
           aria-label="Toggle main menu"
-          class="text-white h-7 w-7 flex items-center justify-center"
+          class="h-7 w-7 flex items-center justify-center"
+          style={`color: ${textColor}`}
           onclick="toggleMenu()"
           id="menu-button"
         >
@@ -44,7 +50,8 @@ const { color = "bg-black", items } = Astro.props;
         </button>
       </div>
       <h1
-        class="text-white font-display text-lg md:text-2xl flex-1 text-center lg:text-left select-none whitespace-nowrap"
+        class="font-display text-lg md:text-2xl flex-1 text-center lg:text-left select-none whitespace-nowrap"
+        style={`color: ${textColor}`}
       >
         <a href="/">Institut 4000</a>
       </h1>
@@ -53,17 +60,23 @@ const { color = "bg-black", items } = Astro.props;
       >
         {
           items.map((item) => (
-            <Navlink isActive={item.isActive} href={item.href}>
+            <Navlink
+              isActive={item.isActive}
+              href={item.href}
+              textColor={textColor}
+            >
               {item.title}
             </Navlink>
           ))
         }
       </div>
-      <div class="flex text-gray-200 space-x-5 flex-1 justify-end">
+      <div
+        class="flex space-x-5 flex-1 justify-end"
+        style={`color: ${textColor}`}
+      >
         <a
           href="https://linkedin.com/in/niels-legolas-clormann"
           target={"_blank"}
-          class="hover:text-white"
         >
           <span class="sr-only">LinkedIn</span>
           <svg
@@ -78,11 +91,7 @@ const { color = "bg-black", items } = Astro.props;
             ></path>
           </svg>
         </a>
-        <a
-          href="https://github.com/flixoflax"
-          target={"_blank"}
-          class="hover:text-white"
-        >
+        <a href="https://github.com/flixoflax" target={"_blank"}>
           <span class="sr-only">Github</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -100,11 +109,15 @@ const { color = "bg-black", items } = Astro.props;
     </div>
   </div>
 
-  <div class="lg:hidden hidden text-white" id="mobile-menu">
+  <div class="lg:hidden hidden" id="mobile-menu" style={`color: ${textColor}`}>
     <div class="flex flex-col space-y-8 p-4 pt-10 items-start">
       {
         items.map((item) => (
-          <NavlinkMobile href={item.href} isActive={item.isActive}>
+          <NavlinkMobile
+            href={item.href}
+            isActive={item.isActive}
+            textColor={textColor}
+          >
             {item.title}
           </NavlinkMobile>
         ))

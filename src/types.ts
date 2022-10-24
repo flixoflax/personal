@@ -11,6 +11,8 @@ export interface CaseStudy {
     }
     services: string[]
     position: number
+    backgroundColor?: string
+    textColor?: string
     draft?: boolean
     draftText?: string
 }

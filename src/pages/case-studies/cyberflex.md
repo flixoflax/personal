@@ -12,6 +12,12 @@ services:
   ["Frontend Development", "CMS Integration", "Deployment", "Overall advisory"]
 
 position: 1
+backgroundColor: black
+textColor: teal
 ---
 
 # Here goes the case study markdown.
+
+
+
+

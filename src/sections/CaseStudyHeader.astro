@@ -2,19 +2,34 @@
 import SectionContainer from "../layout/SectionContainer.astro";
 import type { CaseStudy } from "../types";
 
-type Props = CaseStudy;
+type Props = CaseStudy & {
+  textColor?: string;
+  backgroundColor?: string;
+};
 
-const { client, header, services, description } = Astro.props;
+const {
+  client,
+  header,
+  services,
+  description,
+  backgroundColor = "#000",
+  textColor = "#fff",
+} = Astro.props;
 ---
 
-<SectionContainer className={"bg-black py-16 md:py-20 lg:py-28"}>
+<SectionContainer
+  className={"py-16 md:py-20 lg:py-28"}
+  backgroundColor={backgroundColor}
+>
   <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10">
-    <div class="lg:col-span-10 space-y-8">
+    <div class="lg:col-span-10 space-y-3 lg:space-y-8">
       <span
         set:text={client}
-        class="font-display text-white text-xl md:text-2xl lg:text-3xl"></span>
+        style={`color: ${textColor}`}
+        class="font-display text-xl md:text-2xl lg:text-3xl"></span>
       <h1
-        class="font-display text-4xl md:text-5xl lg:text-6xl text-white"
+        class="font-display text-4xl md:text-5xl lg:text-6xl"
+        style={`color: ${textColor}`}
         set:html={header.headline}
       >
       </h1>

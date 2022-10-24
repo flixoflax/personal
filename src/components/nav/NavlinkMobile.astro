@@ -2,12 +2,19 @@
 interface Props {
   href: string;
   isActive?: boolean;
+  textColor?: string;
 }
 
-const { href, isActive } = Astro.props;
+const { href, isActive, textColor = "#fff" } = Astro.props;
 const className = isActive
-  ? "text-4xl select-none after:transition-all text-white relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:bg-white"
-  : "text-4xl select-none after:transition-all text-white relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:w-0 after:bg-white/70";
+  ? "text-4xl select-none after:transition-all relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:bg-current"
+  : "text-4xl select-none after:transition-all relative after:absolute after:h-[2px] after:mx-auto after:inset-x-0 after:-bottom-2 after:w-0 after:bg-current";
 ---
 
-<a class={className} href={href} onclick="toggleMenu()"><slot /></a>
+<a
+  class={className}
+  href={href}
+  onclick="toggleMenu()"
+  style={`color: ${textColor}`}
+  ><slot />
+</a>

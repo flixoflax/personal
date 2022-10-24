@@ -124,7 +124,11 @@ const { frontmatter } = Astro.props;
     ></script>
   </head>
   <body>
-    <Navbar items={nav} />
+    <Navbar
+      items={nav}
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
     <CaseStudyHeader {...frontmatter} />
 
     <SectionContainer
