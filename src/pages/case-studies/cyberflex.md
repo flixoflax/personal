@@ -13,11 +13,7 @@ services:
 
 position: 1
 backgroundColor: black
-textColor: teal
+textColor: white
 ---
 
 # Here goes the case study markdown.
-
-
-
-
