@@ -6,7 +6,10 @@ interface Props {
   href?: string;
 }
 
-const { title = "Get in touch", href = "/contact" } = Astro.props;
+const {
+  title = "Get in touch",
+  href = "mailto:contact@institut4000.gmbh?subject=%E2%9C%8C%20Hi%20there!",
+} = Astro.props;
 ---
 
 <SectionContainer

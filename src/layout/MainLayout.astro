@@ -46,6 +46,8 @@ const { title, navigation } = Astro.props;
     <meta name="msapplication-TileColor" content="#171717" />
     <meta name="theme-color" content="#ffffff" />
 
+    <slot name="header" />
+
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@700&f[]=general-sans@600&display=swap"
       rel="stylesheet"
