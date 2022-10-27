@@ -144,8 +144,14 @@ const { frontmatter } = Astro.props;
       </div>
     </SectionContainer>
 
-    <CTA />
-    <Footer />
+    <CTA
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
+    <Footer
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
 
     <script>
       import AOS from "aos";

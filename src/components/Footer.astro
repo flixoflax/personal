@@ -2,19 +2,29 @@
 import SectionContainer from "../layout/SectionContainer.astro";
 import Navlink from "./nav/Navlink.astro";
 const copyrightYear = new Date().getFullYear();
+
+interface Props {
+  backgroundColor?: string;
+  textColor?: string;
+}
+
+const { backgroundColor = "#000", textColor = "#fff" } = Astro.props;
 ---
 
-<SectionContainer className={"py-10 lg:py-20"} backgroundColor={"black"}>
+<SectionContainer
+  className={"py-10 lg:py-20"}
+  backgroundColor={backgroundColor}
+>
   <footer>
     <div
       class="flex flex-col md:flex-row justify-between md:items-center space-y-2 md:space-y-0"
     >
       <div class="">
-        <div class="text-gray-300 text-sm">
+        <div class="text-sm" style={`color: ${textColor}; opacity: 0.7`}>
           &copy; {copyrightYear} Institut 4000. All rights reserved.
         </div>
       </div>
-      <div class="text-gray-200">
+      <div style={`color: ${textColor}`}>
         <Navlink href="/legal">Legal</Navlink>
       </div>
     </div>

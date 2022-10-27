@@ -4,24 +4,29 @@ import SectionContainer from "../layout/SectionContainer.astro";
 interface Props {
   title?: string;
   href?: string;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 const {
   title = "Get in touch",
   href = "mailto:contact@institut4000.gmbh?subject=%E2%9C%8C%20Hi%20there!",
+  backgroundColor = "black",
+  textColor = "#fff",
 } = Astro.props;
 ---
 
 <SectionContainer
   className={"py-20 lg:py-36 relative overflow-hidden"}
-  backgroundColor={"#000"}
+  backgroundColor={backgroundColor}
 >
   <div
     class="flex flex-col items-start md:items-center justify-center space-y-10 z-30"
   >
     <h1
       data-aos="fade-up"
-      class="font-display text-4xl md:text-6xl lg:text-8xl text-white md:text-center w-full"
+      class="font-display text-4xl md:text-6xl lg:text-8xl md:text-center w-full"
+      style={`color: ${textColor}`}
     >
       <slot>Let's create something amazing together.</slot>
     </h1>
@@ -30,9 +35,9 @@ const {
   <div class="mt-12 md:mt-16 flex flex-col sm:items-center" data-aos="fade-up">
     <a
       href={href}
+      style={`color: ${backgroundColor}; background-color: ${textColor}`}
       class="rounded-md text-center transition bg-white text-black hover:bg-opacity-90 py-2.5 px-6 select-none"
       >{title}</a
     >
   </div>
 </SectionContainer>
-<div class="w-full border-b border-b-black/70"></div>
