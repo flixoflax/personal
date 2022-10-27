@@ -15,12 +15,17 @@ const { headline } = Astro.props;
   <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10">
     <div class="lg:col-span-10">
       <h1
+        data-aos="fade-up"
+        data-aos-duration="1000"
         class="font-display text-4xl md:text-5xl lg:text-6xl text-white"
         set:html={headline}
-      >
-      </h1>
+      />
     </div>
-    <div class="text-white/70 md:text-lg lg:row-start-2 lg:col-span-8">
+    <div
+      class="text-white/70 md:text-lg lg:row-start-2 lg:col-span-8"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <slot
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolore
         numquam culpa labore magni, deserunt blanditiis quidem dolorem eum

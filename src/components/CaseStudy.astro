@@ -11,10 +11,22 @@ const isComplete = href ? true : false;
 ---
 
 <div class="group space-y-10">
-  <img src={imgUrl} alt={`${client} case study`} class="select-none" />
+  <img
+    src={imgUrl}
+    alt={`${client} case study`}
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    class="select-none"
+  />
   <div class="space-y-5">
-    <h1 class="font-display text-3xl md:text-4xl">{client} —</h1>
-    <div class="text-black/70 pb-5">
+    <h1
+      class="font-display text-3xl md:text-4xl"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      {client} —
+    </h1>
+    <div class="text-black/70 pb-5" data-aos="fade-up" data-aos-duration="1000">
       <slot
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
         error temporibus dolor saepe praesentium architecto nostrum provident
@@ -23,22 +35,24 @@ const isComplete = href ? true : false;
       >
     </div>
 
-    {
-      isComplete ? (
-        <a
-          href={href}
-          class="inline-block rounded-md text-center transition bg-black text-white hover:bg-opacity-90 py-2.5 px-6 select-none"
-        >
-          Read Case Study
-        </a>
-      ) : (
-        <button
-          disabled
-          class="cursor-not-allowed inline-block rounded-md text-center transition bg-gray-200 text-black hover:bg-opacity-90 py-2.5 px-6 select-none"
-        >
-          {incompleteText}
-        </button>
-      )
-    }
+    <div data-aos="fade-up" data-aos-duration="1000">
+      {
+        isComplete ? (
+          <a
+            href={href}
+            class="inline-block rounded-md text-center transition bg-black text-white hover:bg-opacity-90 py-2.5 px-6 select-none"
+          >
+            Read Case Study
+          </a>
+        ) : (
+          <button
+            disabled
+            class="cursor-not-allowed inline-block rounded-md text-center transition bg-gray-200 text-black hover:bg-opacity-90 py-2.5 px-6 select-none"
+          >
+            {incompleteText}
+          </button>
+        )
+      }
+    </div>
   </div>
 </div>

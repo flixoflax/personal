@@ -25,20 +25,23 @@ const {
     <div class="lg:col-span-10 space-y-3 lg:space-y-8">
       <span
         set:text={client}
+        data-aos="fade-up"
+        data-aos-duration="1400"
         style={`color: ${textColor}`}
-        class="font-display text-xl md:text-2xl lg:text-3xl"></span>
+        class="font-display text-xl md:text-2xl lg:text-3xl"
+      />
       <h1
         class="font-display text-4xl md:text-5xl lg:text-6xl"
         style={`color: ${textColor}`}
         set:html={header.headline}
-      >
-      </h1>
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      />
     </div>
     <div
       class="text-white/70 md:text-lg lg:row-start-2 lg:col-span-12"
       set:html={header.content}
-    >
-    </div>
+    />
   </div>
 </SectionContainer>
 
@@ -48,10 +51,11 @@ const {
       <h1
         set:text={description.short}
         class="font-display text-2xl md:text-3xl lg:text-4xl"
-      >
-      </h1>
-      <p class="font-sans lg:text-lg text-black/70" set:html={description.long}>
-      </p>
+      />
+      <p
+        class="font-sans lg:text-lg text-black/70"
+        set:html={description.long}
+      />
     </div>
     <div class="lg:text-lg lg:col-span-4">
       <h1 class="font-display mb-2">Services I provided:</h1>

@@ -20,13 +20,14 @@ const {
     class="flex flex-col items-start md:items-center justify-center space-y-10 z-30"
   >
     <h1
+      data-aos="fade-up"
       class="font-display text-4xl md:text-6xl lg:text-8xl text-white md:text-center w-full"
     >
       <slot>Let's create something amazing together.</slot>
     </h1>
   </div>
 
-  <div class="mt-12 md:mt-16 flex flex-col sm:items-center">
+  <div class="mt-12 md:mt-16 flex flex-col sm:items-center" data-aos="fade-up">
     <a
       href={href}
       class="rounded-md text-center transition bg-white text-black hover:bg-opacity-90 py-2.5 px-6 select-none"

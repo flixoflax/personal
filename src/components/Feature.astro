@@ -20,6 +20,7 @@ const { invert = false, imgUrl, name, subServices } = Astro.props;
     <div class={`flex flex-1 ${invert && "justify-end"}`}>
       <div class={+invert ? "md:ml-20" : "md:mr-20"}>
         <img
+          data-aos="fade-up"
           src={imgUrl}
           alt={`${name} illustration`}
           class="w-4/5 mx-auto mb-10 md:w-full md:h-full"
@@ -27,11 +28,14 @@ const { invert = false, imgUrl, name, subServices } = Astro.props;
       </div>
     </div>
     <div class="flex-1">
-      <h1 class="font-display text-4xl mb-4">{name}</h1>
-      <div class="text-lg text-gray-600">
+      <h1 class="font-display text-4xl mb-4" data-aos="fade-up">{name}</h1>
+      <div class="text-lg text-gray-600" data-aos="fade-up">
         <slot />
         <br />
-        <div class="flex flex-col items-start space-y-2 mt-10">
+        <div
+          class="flex flex-col items-start space-y-2 mt-10"
+          data-aos="fade-up"
+        >
           {
             subServices.map((service) => (
               <strong class="text-black">— {service}</strong>
