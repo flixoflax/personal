@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  logoUrl: string;
+  startDate: string;
+  endDate?: string;
+  whatIdid: string[];
+  className?: string;
+}
+
+const {
+  title,
+  company,
+  logoUrl,
+  location,
+  startDate,
+  endDate = "Present",
+  whatIdid,
+  className,
+} = Astro.props;
+---
+
+<!-- <div class="lg:col-span-12">
+  <div class="border border-black/30 rounded-xl py-10 px-5">
+    <div class="flex flex-row space-x-8 items-center">
+      <img
+        src={logoUrl}
+        alt={`${company} Logo`}
+        class="aspect-square w-20 object-contain"
+      />
+      <div class="space-y-2">
+        <h1 class="font-display text-2xl">{title}</h1>
+        <p class="text-sm text-black/70">{company} · {startDate} — {endDate}</p>
+
+        <div class="space-y-2 text-black/70">
+          {whatIdid.map((item) => <p class="">— {item}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="lg:col-span-12">
+  <div class="border border-black/30 rounded-xl py-10 px-5">
+    <div class="flex flex-row space-x-8 items-center">
+      <img
+        src={logoUrl}
+        alt={`${company} Logo`}
+        class="aspect-square w-20 object-contain"
+      />
+      <div class="space-y-2">
+        <h1 class="font-display text-2xl">{title}</h1>
+        <p class="text-sm text-black/70">{company} · {startDate} — {endDate}</p>
+
+        <div class="space-y-2 text-black/70">
+          {whatIdid.map((item) => <p class="">— {item}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

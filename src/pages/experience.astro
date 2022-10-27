@@ -3,6 +3,8 @@ import MainLayout from "../layout/MainLayout.astro";
 import CTA from "../sections/CTA.astro";
 import About from "../sections/About.astro";
 import PageHeader from "../sections/PageHeader.astro";
+import SectionContainer from "../layout/SectionContainer.astro";
+import Job from "../components/Job.astro";
 
 const nav = [
   {
@@ -30,7 +32,17 @@ const nav = [
     Whether you want to validate your awesome idea with a fully managed <br
     />MVP or need me as your new CTO: I'm here to help.
   </PageHeader>
-  <About />
+  <SectionContainer className={"py-20 md:py-32 lg:py-56"}>
+    <div class="grid lg:grid-cols-12 gap-y-5 md:gap-y-10 gap-x-20">
+      <Job
+        title="VT Student"
+        company="SAP SE"
+        startDate="Sep 2021"
+        logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/SAP-Logo.svg/1115px-SAP-Logo.svg.png"
+        whatIdid={[]}
+      />
+    </div>
+  </SectionContainer>
   <CTA title={"Explore Services"} href={"/services"}
     >Wondering what I can bring to the table?</CTA
   >
