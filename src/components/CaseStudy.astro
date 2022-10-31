@@ -14,19 +14,23 @@ const isComplete = href ? true : false;
   <img
     src={imgUrl}
     alt={`${client} case study`}
-    data-aos="fade-up"
-    data-aos-duration="1000"
+    data-sal="slide-up"
+    data-sal-duration="1000"
     class="select-none"
   />
   <div class="space-y-5">
     <h1
       class="font-display text-3xl md:text-4xl"
-      data-aos="fade-up"
-      data-aos-duration="1000"
+      data-sal="slide-up"
+      data-sal-duration="1000"
     >
       {client} —
     </h1>
-    <div class="text-black/70 pb-5" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      class="text-black/70 pb-5"
+      data-sal="slide-up"
+      data-sal-duration="1000"
+    >
       <slot
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
         error temporibus dolor saepe praesentium architecto nostrum provident
@@ -35,7 +39,7 @@ const isComplete = href ? true : false;
       >
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div data-sal="slide-up" data-sal-duration="1000">
       {
         isComplete ? (
           <a

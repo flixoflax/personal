@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/nav/Navbar.astro";
+import "sal.js/dist/sal.css";
 
 interface Item {
   title: string;
@@ -52,7 +53,6 @@ const { title, navigation } = Astro.props;
       href="https://api.fontshare.com/v2/css?f[]=satoshi@700&f[]=general-sans@600&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>{title}</title>
 
@@ -74,10 +74,10 @@ const { title, navigation } = Astro.props;
         scroll-behavior: smooth;
       }
     </style>
-    <script>
-      import AOS from "aos";
 
-      AOS.init();
+    <script>
+      import sal from "sal.js";
+      sal();
     </script>
   </body>
 </html>
