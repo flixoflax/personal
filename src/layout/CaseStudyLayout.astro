@@ -8,6 +8,7 @@ import SectionContainer from "./SectionContainer.astro";
 import CTA from "../sections/CTA.astro";
 
 import "sal.js/dist/sal.css";
+import "github-markdown-css/github-markdown-light.css";
 
 type Props = MarkdownLayoutProps<CaseStudy>;
 
@@ -67,12 +68,6 @@ const { frontmatter } = Astro.props;
       rel="stylesheet"
     />
     <title>{frontmatter.client} | Institut 4000</title>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-markdown-css@5.1.0/github-markdown-light.css"
-      crossorigin="anonymous"
-    />
 
     <style is:global>
       html {
