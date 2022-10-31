@@ -1,7 +1,7 @@
 ---
 layout: ../../layout/CaseStudyLayout.astro
 client: jym
-thumbnailUrl: /img/studies/jym/cover.png
+thumbnailUrl: /img/studies/jym/cover.webp
 header: { headline: "Focus only on your features." }
 description:
   {

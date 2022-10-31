@@ -1,7 +1,7 @@
 ---
 layout: ../../layout/CaseStudyLayout.astro
 client: FIYA
-thumbnailUrl: /img/studies/fiya/cover.png
+thumbnailUrl: /img/studies/fiya/cover.webp
 header: { headline: "Lorem ipsum dolor sit amet,
       consetetur sadipscing elitr." }
 description:

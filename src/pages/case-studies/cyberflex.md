@@ -1,7 +1,7 @@
 ---
 layout: ../../layout/CaseStudyLayout.astro
 client: cyberflex
-thumbnailUrl: /img/studies/cyberflex/cover.png
+thumbnailUrl: /img/studies/cyberflex/cover.webp
 header: { headline: Crafting web like crafting electro. Simple and effective. }
 description:
   {
