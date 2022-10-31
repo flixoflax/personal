@@ -49,11 +49,6 @@ const { title, navigation } = Astro.props;
 
     <slot name="header" />
 
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@700&f[]=general-sans@600&display=swap"
-      rel="stylesheet"
-    />
-
     <title>{title}</title>
 
     <script
@@ -69,9 +64,31 @@ const { title, navigation } = Astro.props;
 
     <Footer />
 
-    <style>
+    <style is:global>
       html {
         scroll-behavior: smooth;
+      }
+
+      /* Satoshi */
+      @font-face {
+        font-family: "Satoshi";
+        src: url("/fonts/satoshi/Satoshi.woff2") format("woff2"),
+          url("/fonts/satoshi/Satoshi.woff") format("woff"),
+          url("/fonts/satoshi/Satoshi.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      /* General Sans */
+      @font-face {
+        font-family: "General Sans";
+        src: url("/fonts/general-sans/GeneralSans.woff2") format("woff2"),
+          url("/fonts/general-sans/GeneralSans.woff") format("woff"),
+          url("/fonts/general-sans/GeneralSans.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
       }
     </style>
 

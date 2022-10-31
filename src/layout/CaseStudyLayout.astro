@@ -63,10 +63,6 @@ const { frontmatter } = Astro.props;
     <meta name="msapplication-TileColor" content="#171717" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@700&f[]=general-sans@600&display=swap"
-      rel="stylesheet"
-    />
     <title>{frontmatter.client} | Institut 4000</title>
 
     <style is:global>
@@ -111,6 +107,28 @@ const { frontmatter } = Astro.props;
 
       .markdown-body blockquote strong {
         @apply text-black/70;
+      }
+
+      /* Satoshi */
+      @font-face {
+        font-family: "Satoshi";
+        src: url("/fonts/satoshi/Satoshi.woff2") format("woff2"),
+          url("/fonts/satoshi/Satoshi.woff") format("woff"),
+          url("/fonts/satoshi/Satoshi.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      /* General Sans */
+      @font-face {
+        font-family: "General Sans";
+        src: url("/fonts/general-sans/GeneralSans.woff2") format("woff2"),
+          url("/fonts/general-sans/GeneralSans.woff") format("woff"),
+          url("/fonts/general-sans/GeneralSans.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
       }
     </style>
 
