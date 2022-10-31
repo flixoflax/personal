@@ -1,5 +1,7 @@
 ---
 import SectionContainer from "../layout/SectionContainer.astro";
+import { Image } from "@astrojs/image/components";
+import sizeOf from "image-size";
 
 interface Props {
   invert?: boolean;
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const { invert = false, imgUrl, name, subServices } = Astro.props;
+const dimensions = sizeOf(`public/${imgUrl}`);
 ---
 
 <SectionContainer className="py-5">
@@ -19,11 +22,14 @@ const { invert = false, imgUrl, name, subServices } = Astro.props;
   >
     <div class={`flex flex-1 ${invert && "justify-end"}`}>
       <div class={+invert ? "md:ml-20" : "md:mr-20"}>
-        <img
+        <Image
           data-sal="slide-up"
           data-sal-duration="500"
           src={imgUrl}
           alt={`${name} illustration`}
+          width={dimensions.width}
+          height={dimensions.height}
+          format={"webp"}
           class="w-4/5 mx-auto mb-10 md:w-full md:h-full"
         />
       </div>

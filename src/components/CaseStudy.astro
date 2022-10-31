@@ -1,4 +1,8 @@
 ---
+import { getImage } from "@astrojs/image";
+import { Image } from "@astrojs/image/components";
+import sizeOf from "image-size";
+
 interface Props {
   client: string;
   imgUrl: string;
@@ -7,12 +11,17 @@ interface Props {
 }
 
 const { client, imgUrl, href, incompleteText = "Coming Soon" } = Astro.props;
+
+const dimensions = sizeOf(`public/${imgUrl}`);
 const isComplete = href ? true : false;
 ---
 
 <div class="group space-y-10">
-  <img
+  <Image
     src={imgUrl}
+    width={dimensions.width}
+    height={dimensions.height}
+    format={"webp"}
     alt={`${client} case study`}
     data-sal="slide-up"
     data-sal-duration="1000"
