@@ -12,6 +12,6 @@ services:
   ["Frontend Development", "CMS Integration", "Deployment", "Overall advisory"]
 
 position: 1
-backgroundColor: red
+backgroundColor: "#53de40"
 textColor: white
 ---
