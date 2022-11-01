@@ -35,13 +35,14 @@ const dimensions = sizeOf(`public/${imgUrl}`);
       </div>
     </div>
     <div class="flex-1">
-      <h1 class="font-display text-4xl mb-4" data-sal="slide-up">{name}</h1>
-      <div class="text-lg text-gray-600" data-sal="slide-up">
+      <h1 class="font-display text-4xl mb-4" data-sal="slide-up" data-sal-duration="1000">{name}</h1>
+      <div class="text-lg text-gray-600" data-sal="slide-up" data-sal-duration="1000">
         <slot />
         <br />
         <div
           class="flex flex-col items-start space-y-2 mt-10"
           data-sal="slide-up"
+          data-sal-duration="1000"
         >
           {
             subServices.map((service) => (
