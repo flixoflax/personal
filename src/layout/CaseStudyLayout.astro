@@ -65,11 +65,62 @@ const { frontmatter } = Astro.props;
 
     <title>{frontmatter.client} | Institut 4000</title>
 
-    <style is:global>
+    <script
+      defer
+      data-domain="institut4000.gmbh"
+      src="https://plausible.institut4000.gmbh/js/plausible.js"
+    ></script>
+  </head>
+  <body>
+    <Navbar
+      items={nav}
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
+    <CaseStudyHeader {...frontmatter} />
+
+    <SectionContainer
+      className={"py-20 md:py-32 lg:py-56 text-black/70 lg:text-lg"}
+    >
+      <div class="markdown-body">
+        <slot />
+      </div>
+    </SectionContainer>
+
+    <CTA
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
+
+    <style>
       html {
         scroll-behavior: smooth;
       }
 
+      /* Satoshi */
+      @font-face {
+        font-family: "Satoshi";
+        src: url("/fonts/satoshi/Satoshi.woff2") format("woff2"),
+          url("/fonts/satoshi/Satoshi.woff") format("woff"),
+          url("/fonts/satoshi/Satoshi.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      /* General Sans */
+      @font-face {
+        font-family: "General Sans";
+        src: url("/fonts/general-sans/GeneralSans.woff2") format("woff2"),
+          url("/fonts/general-sans/GeneralSans.woff") format("woff"),
+          url("/fonts/general-sans/GeneralSans.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+      }
+    </style>
+
+    <style is:global>
       .markdown-body {
         @apply font-sans text-black/70;
       }
@@ -110,65 +161,15 @@ const { frontmatter } = Astro.props;
       }
     </style>
 
-    <script
-      defer
-      data-domain="institut4000.gmbh"
-      src="https://plausible.institut4000.gmbh/js/plausible.js"
-    ></script>
-  </head>
-  <body>
-    <Navbar
-      items={nav}
-      backgroundColor={frontmatter.backgroundColor}
-      textColor={frontmatter.textColor}
-    />
-    <CaseStudyHeader {...frontmatter} />
-
-    <SectionContainer
-      className={"py-20 md:py-32 lg:py-56 text-black/70 lg:text-lg"}
-    >
-      <div class="markdown-body">
-        <slot />
-      </div>
-    </SectionContainer>
-
-    <CTA
-      backgroundColor={frontmatter.backgroundColor}
-      textColor={frontmatter.textColor}
-    />
-    <Footer
-      backgroundColor={frontmatter.backgroundColor}
-      textColor={frontmatter.textColor}
-    />
-
-    <style>
-      /* Satoshi */
-      @font-face {
-        font-family: "Satoshi";
-        src: url("/fonts/satoshi/Satoshi.woff2") format("woff2"),
-          url("/fonts/satoshi/Satoshi.woff") format("woff"),
-          url("/fonts/satoshi/Satoshi.ttf") format("truetype");
-        font-weight: 700;
-        font-display: swap;
-        font-style: normal;
-      }
-
-      /* General Sans */
-      @font-face {
-        font-family: "General Sans";
-        src: url("/fonts/general-sans/GeneralSans.woff2") format("woff2"),
-          url("/fonts/general-sans/GeneralSans.woff") format("woff"),
-          url("/fonts/general-sans/GeneralSans.ttf") format("truetype");
-        font-weight: 600;
-        font-display: swap;
-        font-style: normal;
-      }
-    </style>
-
     <script>
       import sal from "sal.js";
 
       sal();
     </script>
+
+    <Footer
+      backgroundColor={frontmatter.backgroundColor}
+      textColor={frontmatter.textColor}
+    />
   </body>
 </html>
