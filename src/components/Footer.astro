@@ -24,8 +24,8 @@ const { backgroundColor = "#000", textColor = "#fff" } = Astro.props;
           &copy; {copyrightYear} Institut 4000. All rights reserved.
         </div>
       </div>
-      <div style={`color: ${textColor}`}>
-        <Navlink href="/legal">Legal</Navlink>
+      <div>
+        <Navlink href="/legal" textColor={textColor}>Legal</Navlink>
       </div>
     </div>
   </footer>
