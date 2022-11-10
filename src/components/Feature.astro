@@ -21,22 +21,35 @@ const dimensions = sizeOf(`public/${imgUrl}`);
     } items-center`}
   >
     <div class={`flex flex-1 ${invert && "justify-end"}`}>
-      <div class={+invert ? "md:ml-20" : "md:mr-20"}>
+      <div
+        class={+invert ? "md:ml-20" : "md:mr-20"}
+        data-sal="slide-up"
+        data-sal-duration="500"
+      >
         <Image
-          data-sal="slide-up"
-          data-sal-duration="500"
           src={imgUrl}
           alt={`${name} illustration`}
-          width={dimensions.width}
-          height={dimensions.height}
+          formats={['webp']}
           format={"webp"}
+          width={dimensions.width!*1.4}
+          height={dimensions.height!*1.4}
           class="w-4/5 mx-auto mb-10 md:w-full md:h-full"
         />
       </div>
     </div>
     <div class="flex-1">
-      <h1 class="font-display text-4xl mb-4" data-sal="slide-up" data-sal-duration="1000">{name}</h1>
-      <div class="text-lg text-gray-600" data-sal="slide-up" data-sal-duration="1000">
+      <h1
+        class="font-display text-4xl mb-4"
+        data-sal="slide-up"
+        data-sal-duration="1000"
+      >
+        {name}
+      </h1>
+      <div
+        class="text-lg text-gray-600"
+        data-sal="slide-up"
+        data-sal-duration="1000"
+      >
         <slot />
         <br />
         <div
