@@ -35,7 +35,7 @@ const { backgroundColor = "black", textColor = "white", items } = Astro.props;
         <a href="/">Institut 4000</a>
       </h1>
       <div class="lg:hidden flex flex-1 justify-end items-center space-x-2">
-        <button class="text-white sm:text-md" onclick="toggleMenu()"
+        <button style={`color: ${textColor}`} onclick="toggleMenu()"
           >Menu</button
         >
         <button
