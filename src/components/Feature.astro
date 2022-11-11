@@ -29,11 +29,11 @@ const dimensions = sizeOf(`public/${imgUrl}`);
         <Image
           src={imgUrl}
           alt={`${name} illustration`}
-          formats={['webp']}
+          formats={["webp"]}
           format={"webp"}
-          width={dimensions.width!*1.4}
-          height={dimensions.height!*1.4}
-          class="w-4/5 mx-auto mb-10 md:w-full md:h-full"
+          width={dimensions.width}
+          height={dimensions.height}
+          class="w-full mx-auto mb-10 md:h-full"
         />
       </div>
     </div>
