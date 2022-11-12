@@ -19,6 +19,7 @@ const {
 <SectionContainer
   className={"py-20 lg:py-36 relative overflow-hidden"}
   backgroundColor={backgroundColor}
+  id={"contact"}
 >
   <div
     class="flex flex-col items-start md:items-center justify-center space-y-10 z-30"
@@ -33,7 +34,11 @@ const {
     </h1>
   </div>
 
-  <div class="mt-12 md:mt-16 flex flex-col sm:items-center" data-sal="zoom-in" data-sal-duration="200">
+  <div
+    class="mt-12 md:mt-16 flex flex-col sm:items-center"
+    data-sal="zoom-in"
+    data-sal-duration="200"
+  >
     <a
       href={href}
       style={`color: ${backgroundColor}; background-color: ${textColor}`}

@@ -1,7 +1,7 @@
 ---
 import Feature from "../components/Feature.astro";
 import MainLayout from "../layout/MainLayout.astro";
-import SectionContainer from "../layout/SectionContainer.astro";
+
 import CTA from "../sections/CTA.astro";
 import PageHeader from "../sections/PageHeader.astro";
 
@@ -18,6 +18,10 @@ const nav = [
   {
     title: "Case Studies",
     href: "/case-studies",
+  },
+  {
+    title: "Contact",
+    href: "#contact",
   },
 ];
 ---
@@ -101,7 +105,5 @@ const nav = [
       innovative marketing solutions.
     </Feature>
   </div>
-  <CTA title={"Explore Case Studies"} href={"/case-studies"}
-    >Wanna see it in Action?</CTA
-  >
+  <CTA />
 </MainLayout>
