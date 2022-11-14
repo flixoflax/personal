@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.institut4000.gmbh
+
+# Sitemaps
+Sitemap: https://www.institut4000.gmbh/sitemap.xml
