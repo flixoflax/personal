@@ -16,3 +16,6 @@ position: 1
 backgroundColor: black
 textColor: "#37B6E6"
 ---
+
+# Here goes the case study text
+When the site goes live, there needs to be text here...
