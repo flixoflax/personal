@@ -26,7 +26,12 @@ const nav = [
 ---
 
 <MainLayout title="Legal | Institut 4000" navigation={nav}>
-  <PageHeader headline='Imprint &amp; <br class="sm:hidden" /> Privacy Policy'>
+  <link
+    rel="canonical"
+    href="https://www.institut4000.gmbh/legal"
+    slot="header"
+  />
+  <PageHeader headline='Imprint & <br class="sm:hidden" /> Privacy Policy'>
     I take the protection of your personal data very seriously. I process
     personal data gathered when visiting my websites in compliance with
     applicable data protection legislation. I neither publish your data nor
