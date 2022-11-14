@@ -43,15 +43,15 @@ const { frontmatter, url } = Astro.props;
     <meta http-equiv="Pragma" content="cache" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta http-equiv="content-Language" content="en" />
-    <meta name="description" content="" />
+    <meta name="description" content={frontmatter.description.long} />
     <meta name="keywords" content="" />
     <meta name="author" content="Niels Clormann" />
     <meta name="publisher" content="Institut 4000" />
     <meta name="copyright" content="Niels Clormann © 2022" />
     <meta name="audience" content="all" />
-    <meta name="page-type" content="private homepage" />
-    <meta name="page-topic" content="service" />
-    <meta http-equiv="Reply-to" content="flixoflax@gmx.de" />
+    <meta name="page-type" content="case-study" />
+    <meta name="page-topic" content={frontmatter.client + " (case study)"} />
+    <meta http-equiv="Reply-to" content="contact@institut4000.gmbh" />
     <meta name="expires" content="" />
     <meta name="revisit-after" content="2 days" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,9 +83,9 @@ const { frontmatter, url } = Astro.props;
     <SectionContainer
       className={"py-20 md:py-32 lg:py-56 text-black/70 lg:text-lg"}
     >
-      <div class="markdown-body">
+      <main class="markdown-body">
         <slot />
-      </div>
+      </main>
     </SectionContainer>
 
     <CTA

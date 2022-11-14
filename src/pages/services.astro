@@ -39,76 +39,79 @@ const nav = [
     experiences. No matter the size or complexity of the project, I can create
     anything from a simple prototype to a full-blown SaaS application.
   </PageHeader>
-  <div class="py-20 md:py-32 lg:py-56 flex flex-col space-y-10">
-    <Feature
-      imgUrl="/img/development.webp"
-      name="Development"
-      subServices={[
-        "Landing Pages (Astro)",
-        "Mobile Applications (React Native)",
-        "Web Applications (NextJs)",
-        "Backend Services (Python, NodeJS)",
-        "And much more",
-      ]}
-    >
-      Do you have an idea, but don't know how to get it started? Let's work
-      together to bring your idea to life. I'll work together with you
-      step-by-step until the final product is ready for launch! I provide full
-      stack development services including frontend, backend, database and more.
-    </Feature>
+  <main>
+    <div class="py-20 md:py-32 lg:py-56 flex flex-col space-y-10">
+      <Feature
+        imgUrl="/img/development.webp"
+        name="Development"
+        subServices={[
+          "Landing Pages (Astro)",
+          "Mobile Applications (React Native)",
+          "Web Applications (NextJs)",
+          "Backend Services (Python, NodeJS)",
+          "And much more",
+        ]}
+      >
+        Do you have an idea, but don't know how to get it started? Let's work
+        together to bring your idea to life. I'll work together with you
+        step-by-step until the final product is ready for launch! I provide full
+        stack development services including frontend, backend, database and
+        more.
+      </Feature>
 
-    <Feature
-      imgUrl="/img/design.webp"
-      name="Design"
-      subServices={[
-        "Design Exploration",
-        "User Interface Design",
-        "User Experience Design",
-        "Design Quality Assurance",
-        "Branding",
-      ]}
-      invert={true}
-    >
-      I'm not just a developer - I'm also skilled in design. My design process
-      focuses on simplifying sophisticated solutions that are functional and
-      intuitive, while also considering existing brand guidelines and any
-      specific needs you may have.
-    </Feature>
+      <Feature
+        imgUrl="/img/design.webp"
+        name="Design"
+        subServices={[
+          "Design Exploration",
+          "User Interface Design",
+          "User Experience Design",
+          "Design Quality Assurance",
+          "Branding",
+        ]}
+        invert={true}
+      >
+        I'm not just a developer - I'm also skilled in design. My design process
+        focuses on simplifying sophisticated solutions that are functional and
+        intuitive, while also considering existing brand guidelines and any
+        specific needs you may have.
+      </Feature>
 
-    <Feature
-      imgUrl="/img/consulting.webp"
-      name="Consulting"
-      subServices={[
-        "MVP Creation",
-        "Design",
-        "Techstack",
-        "Infrastructure",
-        "Deployment",
-        "Almost every IT-Topic",
-      ]}
-    >
-      Because of my experience, I can help you with anything IT-related or
-      related to your product's design or development. From project management
-      to devops to backend coding, I've got you covered!
-    </Feature>
+      <Feature
+        imgUrl="/img/consulting.webp"
+        name="Consulting"
+        subServices={[
+          "MVP Creation",
+          "Design",
+          "Techstack",
+          "Infrastructure",
+          "Deployment",
+          "Almost every IT-Topic",
+        ]}
+      >
+        Because of my experience, I can help you with anything IT-related or
+        related to your product's design or development. From project management
+        to devops to backend coding, I've got you covered!
+      </Feature>
 
-    <Feature
-      imgUrl="/img/productmanagement.webp"
-      name="Product Management"
-      subServices={[
-        "Product Roadmap",
-        "Product Priorization",
-        "Product Delivery",
-        "Customer Feedback",
-        "Project Management",
-      ]}
-      invert={true}
-    >
-      Product management is my passion. I work with startups as well as
-      established organizations to realize their full potential for growth and
-      profitability through sound strategy, creative marketing campaigns, and
-      innovative marketing solutions.
-    </Feature>
-  </div>
+      <Feature
+        imgUrl="/img/productmanagement.webp"
+        name="Product Management"
+        subServices={[
+          "Product Roadmap",
+          "Product Priorization",
+          "Product Delivery",
+          "Customer Feedback",
+          "Project Management",
+        ]}
+        invert={true}
+      >
+        Product management is my passion. I work with startups as well as
+        established organizations to realize their full potential for growth and
+        profitability through sound strategy, creative marketing campaigns, and
+        innovative marketing solutions.
+      </Feature>
+    </div>
+  </main>
   <CTA />
 </MainLayout>
