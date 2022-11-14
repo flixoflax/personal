@@ -93,7 +93,8 @@ const { title, navigation } = Astro.props;
     </style>
 
     <script>
-      import sal from "sal.js";
+      const sal = (await import("sal.js")).default;
+
       sal();
     </script>
   </body>
