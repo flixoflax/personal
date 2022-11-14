@@ -20,6 +20,9 @@ const nav = [
     href: "/#contact",
   },
 ];
+
+Astro.response.status = 404;
+Astro.response.statusText = "Not found";
 ---
 
 <MainLayout title="Not found | Institut 4000" navigation={nav}>
