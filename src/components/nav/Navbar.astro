@@ -28,12 +28,12 @@ const { backgroundColor = "black", textColor = "white", items } = Astro.props;
     data-sal-duration="1000"
   >
     <div class="relative flex h-20 items-center justify-between">
-      <h1
+      <span
         class="font-display text-xl md:text-2xl flex-1 text-left select-none whitespace-nowrap"
         style={`color: ${textColor}`}
       >
         <a href="/">Institut 4000</a>
-      </h1>
+      </span>
       <div class="lg:hidden flex flex-1 justify-end items-center space-x-2">
         <button style={`color: ${textColor}`} onclick="toggleMenu()"
           >Menu</button
