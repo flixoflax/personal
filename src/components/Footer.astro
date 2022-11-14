@@ -24,9 +24,11 @@ const { backgroundColor = "#000", textColor = "#fff" } = Astro.props;
           &copy; {copyrightYear} Institut 4000. All rights reserved.
         </div>
       </div>
-      <div>
-        <Navlink href="/legal" textColor={textColor}
-          >Imprint & Privacy Policy</Navlink
+      <div class="flex space-x-2 md:space-x-5">
+        <Navlink href="/legal#imprint" textColor={textColor}>Imprint</Navlink>
+
+        <Navlink href="/legal#privacy" textColor={textColor}
+          >Privacy Policy</Navlink
         >
       </div>
     </div>
