@@ -16,56 +16,94 @@ const dimensions = sizeOf(`public/${imgUrl}`);
 const isComplete = href ? true : false;
 ---
 
-<div class="group space-y-10">
-  <Image
-    src={imgUrl}
-    width={dimensions.width}
-    height={dimensions.height}
-    format={"webp"}
-    alt={`${client} case study`}
-    data-sal="slide-up"
-    data-sal-duration="1000"
-    class="select-none"
-  />
-  <div class="space-y-5">
-    <h3
-      class="font-display text-3xl md:text-4xl"
-      data-sal="slide-up"
-      data-sal-duration="1000"
-    >
-      {client} —
-    </h3>
-    <div
-      class="text-black/70 pb-5"
-      data-sal="slide-up"
-      data-sal-duration="1000"
-    >
-      <slot
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-        error temporibus dolor saepe praesentium architecto nostrum provident
-        eius aperiam laboriosam iusto ea mollitia exercitationem illum odit
-        cumque nisi voluptate repellat?</slot
-      >
-    </div>
-
-    <div data-sal="slide-up" data-sal-duration="1000">
-      {
-        isComplete ? (
-          <a
-            href={href}
-            class="inline-block rounded-md text-center transition bg-black text-white hover:bg-opacity-90 py-2.5 px-6 select-none"
+{
+  isComplete ? (
+    <div class="group space-y-10">
+      <a href={href}>
+        <Image
+          src={imgUrl}
+          width={dimensions.width}
+          height={dimensions.height}
+          format={"webp"}
+          alt={`${client} case study`}
+          data-sal="slide-up"
+          data-sal-duration="1000"
+          class="select-none"
+        />
+        <div class="space-y-5">
+          <h3
+            class="font-display text-3xl md:text-4xl"
+            data-sal="slide-up"
+            data-sal-duration="1000"
           >
-            Read Case Study
-          </a>
-        ) : (
+            {client} —
+          </h3>
+          <div
+            class="text-black/70 pb-5"
+            data-sal="slide-up"
+            data-sal-duration="1000"
+          >
+            <slot>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Blanditiis, error temporibus dolor saepe praesentium architecto
+              nostrum provident eius aperiam laboriosam iusto ea mollitia
+              exercitationem illum odit cumque nisi voluptate repellat?
+            </slot>
+          </div>
+
+          <div data-sal="slide-up" data-sal-duration="1000">
+            <a
+              href={href}
+              class="inline-block rounded-md text-center transition bg-black text-white hover:bg-opacity-90 py-2.5 px-6 select-none"
+            >
+              Read Case Study
+            </a>
+          </div>
+        </div>
+      </a>
+    </div>
+  ) : (
+    <div class="group space-y-10">
+      <Image
+        src={imgUrl}
+        width={dimensions.width}
+        height={dimensions.height}
+        format={"webp"}
+        alt={`${client} case study`}
+        data-sal="slide-up"
+        data-sal-duration="1000"
+        class="select-none"
+      />
+      <div class="space-y-5">
+        <h3
+          class="font-display text-3xl md:text-4xl"
+          data-sal="slide-up"
+          data-sal-duration="1000"
+        >
+          {client} —
+        </h3>
+        <div
+          class="text-black/70 pb-5"
+          data-sal="slide-up"
+          data-sal-duration="1000"
+        >
+          <slot>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Blanditiis, error temporibus dolor saepe praesentium architecto
+            nostrum provident eius aperiam laboriosam iusto ea mollitia
+            exercitationem illum odit cumque nisi voluptate repellat?
+          </slot>
+        </div>
+
+        <div data-sal="slide-up" data-sal-duration="1000">
           <button
             disabled
             class="cursor-not-allowed inline-block rounded-md text-center transition bg-gray-200 text-black hover:bg-opacity-90 py-2.5 px-6 select-none"
           >
             {incompleteText}
           </button>
-        )
-      }
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  )
+}
