@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.institut4000.gmbh
+Host: https://www.institut4000.io
 
 # Sitemaps
-Sitemap: https://www.institut4000.gmbh/sitemap.xml
+Sitemap: https://www.institut4000.io/sitemap.xml
