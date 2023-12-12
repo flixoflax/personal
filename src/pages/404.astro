@@ -25,8 +25,10 @@ Astro.response.status = 404;
 Astro.response.statusText = "Not found";
 ---
 
-<MainLayout title="Not found | Institut 4000" navigation={nav}>
-  <CTA title={"Beam me up, Scotty!"} href={"/"}>
-    A little lost? Let's try again right from the start.
-  </CTA>
+<MainLayout title="Not found | Institut 4000" navigation={nav} bgColor="black">
+  <div class="flex flex-col justify-center bg-black">
+    <CTA title={"Beam me up, Scotty!"} href={"/"}>
+      A little lost? Let's try again right from the start.
+    </CTA>
+  </div>
 </MainLayout>
