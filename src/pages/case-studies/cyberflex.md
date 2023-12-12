@@ -12,7 +12,7 @@ description:
 services:
   ["Frontend Development", "CMS Integration", "Deployment", "Overall advisory"]
 
-position: 1
+position: 3
 backgroundColor: black
 textColor: "#37B6E6"
 ---
