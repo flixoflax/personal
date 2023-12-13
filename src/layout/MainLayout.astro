@@ -63,12 +63,15 @@ const { title, navigation, bgColor } = Astro.props;
       src="https://plausible.institut4000.io/js/plausible.js"
     ></script>
   </head>
-  <body class="min-h-screen" style={bgColor ? `background-color: ${bgColor}` : ""}>
+  <body
+    class="min-h-screen"
+    style={bgColor ? `background-color: ${bgColor}` : ""}
+  >
     <div class="flex min-h-screen flex-col justify-between">
       <Navbar items={navigation} />
-      
+
       <slot />
-      
+
       <Footer />
     </div>
 
@@ -89,13 +92,13 @@ const { title, navigation, bgColor } = Astro.props;
         font-style: normal;
       }
 
-      /* General Sans */
+      /* Switzer */
       @font-face {
-        font-family: "General Sans";
-        src: url("/fonts/general-sans/GeneralSans.woff2") format("woff2"),
-          url("/fonts/general-sans/GeneralSans.woff") format("woff"),
-          url("/fonts/general-sans/GeneralSans.ttf") format("truetype");
-        font-weight: 600;
+        font-family: "Switzer";
+        src: url("/fonts/switzer/Switzer-Variable.woff2") format("woff2"),
+          url("/fonts/switzer/Switzer-Variable.woff") format("woff"),
+          url("/fonts/switzer/Switzer-Variable.ttf") format("truetype");
+        font-weight: 100 900;
         font-display: swap;
         font-style: normal;
       }
