@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import rehypeTitleFigure from "rehype-title-figure";
+import vercel from '@astrojs/vercel/serverless';
 
 import image from "@astrojs/image";
 
@@ -14,5 +15,11 @@ export default defineConfig({
   markdown: {
     rehypePlugins: [rehypeTitleFigure],
     extendDefaultPlugins: true
-  }
+  },
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });

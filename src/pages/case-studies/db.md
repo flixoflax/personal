@@ -21,6 +21,6 @@ draft: true
 
 ##
 
-![](/public/img/studies/db/wunderline_infobox_20231201.jpg)
-![](/public/img/studies/db/wunderline_infobox_20231201-2.jpg)
-![](/public/img/studies/db/wunderline_infobox_20231201-3.jpg)
+![](/img/studies/db/wunderline_infobox_20231201-2.jpg)
+![](/img/studies/db/wunderline_infobox_20231201-3.jpg)
+![](/img/studies/db/wunderline_infobox_20231201.jpg)
