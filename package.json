@@ -12,7 +12,7 @@
     "study": "node create-new-study.js"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.4",
+    "@astrojs/image": "^0.18.0",
     "@astrojs/tailwind": "^5.0.3",
     "@astrojs/vercel": "^6.0.2",
     "@vercel/analytics": "^1.1.1",
